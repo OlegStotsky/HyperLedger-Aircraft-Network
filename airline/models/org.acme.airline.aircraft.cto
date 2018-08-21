@@ -17,3 +17,22 @@
  */
 
 namespace org.acme.airline.aircraft
+
+asset Aircraft identified by aircraftId {
+  o String aircraftId
+
+  o Ownership ownershipType default="LEASED"
+
+  //number of seats per class
+  o Integer firstClassSeats
+  o Integer businessClassSeats
+  o Integer economyClassSeats
+
+  o String nickName optional
+}
+
+enum Ownership {
+  o LEASED
+  o OWNED
+}
+
